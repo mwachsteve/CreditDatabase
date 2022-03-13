@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CreditManagerDb
 
 # Controls when the workflow will run
 on:
@@ -24,5 +24,5 @@ jobs:
     - name: setup-sqlpackage
       uses: coreywebber/setup-sqlpackage@v1.0.2
 
-    - name: Restoring the database
-      run: sqlpackage /Action:Import /sf:${{github.workspace}}\credit.dacpac /tsn:${{secrets.DB_SERVER}} /tdn:${{env.database}} /tu:${{env.db_user}} /tp:${{ secrets.db_password }} /p:DatabaseMaximumSize=2 /p:DatabaseEdition=Basic
+    #- name: Restoring the database
+    #  run: sqlpackage /Action:Import /sf:${{github.workspace}}\credit.dacpac /tsn:${{secrets.DB_SERVER}} /tdn:${{env.database}} /tu:${{env.db_user}} /tp:${{ secrets.db_password }} /p:DatabaseMaximumSize=2 /p:DatabaseEdition=Basic
